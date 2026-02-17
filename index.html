@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCart - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+
+    <div class="navbar bg-white shadow-sm sticky top-0 z-50 px-4 md:px-10 border-b">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-2xl font-bold text-indigo-600">SwiftCart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 font-medium text-gray-600">
+                <li><a href="index.html" class="text-indigo-600">Home</a></li>
+                <li><a href="products.html" class="hover:text-indigo-600">Products</a></li>
+                <li><a class="hover:text-indigo-600">About</a></li>
+                <li><a class="hover:text-indigo-600">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <div class="indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        <span class="badge badge-sm indicator-item badge-primary" id="cart-count">0</span>
+                    </div>
+                </div>
+                <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+                    <div class="card-body">
+                        <span class="font-bold text-lg" id="cart-item-info">0 Items</span>
+                        <span class="text-info" id="cart-total-price">Subtotal: $0.00</span>
+                        <div class="card-actions">
+                            <button onclick="document.getElementById('cart_modal').showModal()" class="btn btn-primary btn-block bg-indigo-600 border-none">View Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero min-h-[550px] hero-bg text-white">
+        <div class="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl px-4 md:px-10"> 
+            <div class="max-w-1xl text-left">
+                <h1 class="text-7xl md:text-1xl font-bold mb-6 leading-tight">Best Collection For You</h1>
+                <p class="mb-8 text-3xl text-gray-200">Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart today.</p>
+                <a href="products.html" class="btn btn-primary bg-indigo-600 hover:bg-indigo-700 border-none text-white px-8 h-12 text-lg">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-20 px-4 md:px-10 bg-white">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900">Why Choose Us</h2>
+            <p class="text-gray-500 mt-3 text-lg">We provide the best shopping experience with top-notch services.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div class="card bg-white hover:shadow-xl transition duration-300 border border-gray-100 rounded-2xl p-6 text-left">
+                <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 text-2xl mb-6">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-900">Fast Delivery</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Get your orders delivered to your doorstep quickly and efficiently.</p>
+            </div>
+
+            <div class="card bg-white hover:shadow-xl transition duration-300 border border-gray-100 rounded-2xl p-6 text-left">
+                <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 text-2xl mb-6">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-900">24/7 Support</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Our support team is available around the clock to assist you.</p>
+            </div>
+
+            <div class="card bg-white hover:shadow-xl transition duration-300 border border-gray-100 rounded-2xl p-6 text-left">
+                <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 text-2xl mb-6">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-900">Secure Payment</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Experience safe and secure transactions with our encrypted payment systems.</p>
+            </div>
+
+            <div class="card bg-white hover:shadow-xl transition duration-300 border border-gray-100 rounded-2xl p-6 text-left">
+                <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 text-2xl mb-6">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-gray-900">Easy Returns</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Not satisfied? Return your products easily within 30 days.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 md:px-10 bg-gray-50">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Trending Now</h2>
+        </div>
+        <div id="trending-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="skeleton h-96 w-full rounded-xl"></div>
+            <div class="skeleton h-96 w-full rounded-xl"></div>
+            <div class="skeleton h-96 w-full rounded-xl"></div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            <div>
+                <h3 class="text-2xl font-bold text-indigo-500 mb-4">SwiftCart</h3>
+                <p class="text-gray-400 text-sm">Your one-stop shop for all your fashion and lifestyle needs.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul class="text-gray-400 text-sm space-y-2">
+                    <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
+                    <li><a href="products.html" class="hover:text-indigo-400">Products</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Support</h4>
+                <ul class="text-gray-400 text-sm space-y-2">
+                    <li><a href="#" class="hover:text-indigo-400">FAQ</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">Shipping</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Newsletter</h4>
+                <div class="join w-full">
+                    <input class="input input-bordered join-item w-full text-black" placeholder="Email" />
+                    <button class="btn btn-primary join-item bg-indigo-600 border-none">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm border-t border-gray-800 pt-8">
+            &copy; 2025 SwiftCart, Inc. All rights reserved.
+        </div>
+    </footer>
+
+    <dialog id="cart_modal" class="modal">
+        <div class="modal-box w-11/12 max-w-2xl">
+            <h3 class="font-bold text-lg mb-4">Your Shopping Cart</h3>
+            <div class="overflow-x-auto max-h-80">
+                <table class="table w-full">
+                    <thead><tr><th>Product</th><th>Price</th><th>Action</th></tr></thead>
+                    <tbody id="cart-items-container"></tbody>
+                </table>
+            </div>
+            <div class="flex justify-between items-center mt-6 border-t pt-4">
+                <div class="text-xl font-bold">Total: $<span id="cart-total-modal">0.00</span></div>
+                <div class="flex gap-2">
+                    <form method="dialog"><button class="btn btn-ghost">Close</button></form>
+                    <button class="btn btn-primary bg-indigo-600 border-none">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="details_modal" class="modal">
+        <div class="modal-box w-11/12 max-w-3xl">
+            <form method="dialog"><button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button></form>
+            <div id="modal-content" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
